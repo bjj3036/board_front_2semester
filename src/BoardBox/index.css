@@ -1,0 +1,32 @@
+.Board-Box {
+    border: 1px solid #e2984e;
+    padding: 10px;
+    width: 48%;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.Board-Name {
+
+}
+
+.Board-Desc {
+    color: #a6a6a6EE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.Edge-Triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    border-left: 6px solid #e2984e;
+    border-top: 6px solid #e2984e;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+}

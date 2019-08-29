@@ -1,0 +1,37 @@
+.Editor-Form {
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.Input-Title {
+    width: 100%;
+    outline-color: gray;
+    padding: 2px 5px;
+    font-size: 1.1em;
+}
+
+.ck-editor__editable_inline {
+    min-height: 400px;
+}
+
+.Editor-Form > * {
+    margin-bottom: 8px;
+}
+
+.Editor-Form > *:last-child {
+    margin-bottom: 0;
+}
+
+.Button1 {
+    margin-right: 3px;
+}
+
+.Button1:last-child {
+    margin-right: 0;
+}
+
+.Button-Container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}

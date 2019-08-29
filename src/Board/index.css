@@ -1,0 +1,30 @@
+
+.Board-Name {
+
+}
+
+.Board-Desc {
+    color: #a6a6a6EE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.NewPost-Button{
+    margin-top: 15px;
+}
+
+.Page-Button{
+    font-size: 1.1em;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.Page-Button:hover{
+    color: #91d794;
+}
+
+.Select-Page{
+    color: #81c784;
+}

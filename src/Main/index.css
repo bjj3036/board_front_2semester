@@ -1,0 +1,10 @@
+.Recent-Post-Container{
+    min-height: 300px;
+}
+
+.Board-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}

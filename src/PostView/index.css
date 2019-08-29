@@ -1,0 +1,40 @@
+.Post-View-Container {
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.Post-Title {
+    font-size: 1.2em;
+    border-bottom: 2px solid #e2984e;
+    padding-bottom: 4px;
+}
+
+.Post-Content {
+    min-height: 300px;
+}
+
+.Post-Info-Container {
+    display: flex;
+}
+
+.Post-Info-Writer {
+    justify-self: flex-start;
+}
+
+.Post-Info-Time {
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+.Post-Info-View {
+    margin-left: 10px;
+    justify-self: flex-end
+}
+
+.Post-Info-Container:last-child{
+    justify-content: center;
+}
+
+.Right-Navi{
+    margin-left: auto;
+}

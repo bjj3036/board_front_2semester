@@ -1,0 +1,36 @@
+.Register-Form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.Register-Form input {
+    font-size: 1.2em;
+}
+
+.Register-Form>*{
+    margin-bottom: 5px;
+}
+
+.Register-Container {
+    display: flex;
+    height: 400px;
+}
+
+.Register-Container h3 {
+    margin: 0;
+}
+
+.Profile-Image {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Image-Container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 20px;
+}
