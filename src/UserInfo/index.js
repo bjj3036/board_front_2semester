@@ -36,7 +36,7 @@ class UserInfo extends Component {
                             아이디 {this.state.id}
                         </div>
                         <div>
-                            이름{this.state.name}
+                            이름 {this.state.username}
                         </div>
                         <div>
                             성별 {this.state.gender}
@@ -56,7 +56,6 @@ class UserInfo extends Component {
                              src={'http://localhost:8080/image/' + this.state.profile_image}/>
                     </div>
                 </div>
-                <button className='Button1'>정보수정</button>
             </div>
         );
     }

@@ -41,8 +41,9 @@ class Register extends Component {
         if (e.target.files.length) {
             let file = e.target.files[0]
             let profile_image = await this.props.stores.AttachStore.upload(file);
+            console.log(profile_image)
             this.setState({
-                profile_image
+                profileImage: profile_image
             })
         }
     }
@@ -111,7 +112,7 @@ class Register extends Component {
                     </div>
                     <div className='Image-Container'>
                         <img className='Profile-Image Surface-Color Box-Shadow'
-                             src={'http://localhost:8080/image/' + this.state.profile_image}/>
+                             src={'http://localhost:8080/image/' + this.state.profileImage}/>
                         <input type='file' accept="image/jpeg, image/png" onChange={this.onFileSelected}
                                title='이미지 선택'/>
                     </div>

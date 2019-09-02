@@ -12,7 +12,7 @@ class InfoEdit extends Component {
         age: 23,
         password: 0,
         password_confirm: 0,
-        profile_image: 1,
+        profileImage: 1,
         total_recommend: 0,
         total_post: 0,
         goToMain: false
@@ -29,7 +29,7 @@ class InfoEdit extends Component {
             let file = e.target.files[0]
             let profile_image = await this.props.stores.AttachStore.upload(file);
             this.setState({
-                profile_image
+                profileImage: profile_image
             })
         }
     }
@@ -44,7 +44,6 @@ class InfoEdit extends Component {
             id: this.state.id,
             password: this.state.password_confirm
         })
-        console.log(response)
         if(response.success){
             await UserStore.updateUser(this.state)
             alert('정보가 수정되었습니다')
@@ -60,7 +59,8 @@ class InfoEdit extends Component {
     async componentDidMount() {
         let id = this.props.stores.UserStore.loginUserId;
         let userInfo = await this.props.stores.UserStore.getUserInfo(id);
-        this.setState({...userInfo})
+        console.log(userInfo)
+        this.setState({...userInfo, profileImage: userInfo.profile_image})
     }
 
     render() {
@@ -98,7 +98,7 @@ class InfoEdit extends Component {
                     </div>
                     <div className='Image-Container'>
                         <img className='Profile-Image Surface-Color Box-Shadow'
-                             src={'http://localhost:8080/image/' + this.state.profile_image}/>
+                             src={'http://localhost:8080/image/' + this.state.profileImage}/>
                         <input type='file' accept="image/jpeg, image/png" onChange={this.onFileSelected}
                                title='이미지 선택'/>
                     </div>

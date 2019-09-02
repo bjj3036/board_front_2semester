@@ -28,3 +28,12 @@
 .Select-Page{
     color: #81c784;
 }
+
+.footer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer>div{
+    margin-top: 15px;
+}

@@ -116,18 +116,23 @@ class Board extends Component {
                     <option value="recommend">추천순</option>
                 </select>
                 <PostList posts={this.props.stores.PostStore.posts}/>
-                {this.state.first !== 1 &&
-                <span onClick={this.onPreviousClick} dangerouslySetInnerHTML={{__html: '&lt'}}></span>}
-                {this.state.pages.map(e => {
-                    if (this.state.page == e)
-                        return <span key={e} className='Page-Button Select-Page'
-                                     onClick={this.onPageChange}>{e}</span>
-                    return <span key={e} className='Page-Button'
-                                 onClick={this.onPageChange}>{e}</span>
-                })}
-                {this.state.last !== (this.props.stores.BoardStore.board && this.props.stores.BoardStore.board.max_page) &&
-                <span onClick={this.onNextClick} dangerouslySetInnerHTML={{__html: '&gt'}}></span>}
-                <button className='Button1 NewPost-Button' onClick={this.onWritePostClick}>새 글쓰기</button>
+                <div className='footer'>
+                    <div></div>
+                    <div>
+                        {this.state.first !== 1 &&
+                        <span onClick={this.onPreviousClick} dangerouslySetInnerHTML={{__html: '&lt'}}></span>}
+                        {this.state.pages.map(e => {
+                            if (this.state.page == e)
+                                return <span key={e} className='Page-Button Select-Page'
+                                             onClick={this.onPageChange}>{e}</span>
+                            return <span key={e} className='Page-Button'
+                                         onClick={this.onPageChange}>{e}</span>
+                        })}
+                        {this.state.last !== (this.props.stores.BoardStore.board && this.props.stores.BoardStore.board.max_page) &&
+                        <span onClick={this.onNextClick} dangerouslySetInnerHTML={{__html: '&gt'}}></span>}
+                    </div>
+                    <button className='Button1 NewPost-Button' onClick={this.onWritePostClick}>새 글쓰기</button>
+                </div>
             </div>
         );
     }
